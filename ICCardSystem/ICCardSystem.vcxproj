@@ -198,12 +198,9 @@
     <ClInclude Include="CRefundRecordDB.h" />
     <ClInclude Include="CReopenCardRecordDB.h" />
     <ClInclude Include="CReturnDepositRecordDB.h" />
-    <ClInclude Include="CToolPriceCard.h" />
-    <ClInclude Include="CToolQueryCard.h" />
+    <ClInclude Include="CToolLicenseCard.h" />
     <ClInclude Include="CToolReadCard.h" />
-    <ClInclude Include="CToolResetCard.h" />
     <ClInclude Include="CToolSetCard.h" />
-    <ClInclude Include="CToolTestCard.h" />
     <ClInclude Include="CUnionDB.h" />
     <ClInclude Include="CUser.h" />
     <ClInclude Include="CUserCloseCard.h" />
@@ -249,12 +246,9 @@
     <ClCompile Include="CRefundRecordDB.cpp" />
     <ClCompile Include="CReopenCardRecordDB.cpp" />
     <ClCompile Include="CReturnDepositRecordDB.cpp" />
-    <ClCompile Include="CToolPriceCard.cpp" />
-    <ClCompile Include="CToolQueryCard.cpp" />
+    <ClCompile Include="CToolLicenseCard.cpp" />
     <ClCompile Include="CToolReadCard.cpp" />
-    <ClCompile Include="CToolResetCard.cpp" />
     <ClCompile Include="CToolSetCard.cpp" />
-    <ClCompile Include="CToolTestCard.cpp" />
     <ClCompile Include="CUnionDB.cpp" />
     <ClCompile Include="CUser.cpp" />
     <ClCompile Include="CUserCloseCard.cpp" />

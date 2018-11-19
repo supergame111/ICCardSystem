@@ -211,63 +211,17 @@ void CCardOperator::DecodeSetCard(const CString & strCard, int & nDeviceID, int 
 }
 
 
-CString CCardOperator::EncodeResetCard(int nDeviceID, int nUnitID, int nCardType,int nWriteDeviceID)
+CString CCardOperator::EncodeLicenseCard(int nDeviceID, int nUnitID, int nCardType)
 {
 	CString strCard;
-	strCard.Format(_T("%08X%04X%04X%08X%08X"), nDeviceID, nUnitID, nCardType, nWriteDeviceID, 0x55555555);
+	strCard.Format(_T("%08X%04X%04X%08X%08X"), nDeviceID, nUnitID, nCardType, 0x55555555, 0x55555555);
 	return strCard;
 }
 
 
-void CCardOperator::DecodeResetCard(const CString & strCard, int & nDeviceID, int  & nUnitID, int  & nCardType, int & nWriteDeviceID)
+void CCardOperator::DecodeLicenseCard(const CString & strCard, int & nDeviceID, int  & nUnitID, int  & nCardType)
 {
 	nDeviceID = _tcstol(strCard.Mid(0, 8), NULL, 16);
 	nUnitID = _tcstol(strCard.Mid(8, 4), NULL, 16);
 	nCardType = _tcstol(strCard.Mid(12, 4), NULL, 16);
-	nWriteDeviceID = _tcstol(strCard.Mid(16, 8), NULL, 16);
-}
-
-
-CString CCardOperator::EncodePriceCard(int nDeviceID, int nUnitID, int nCardType,int nPrice)
-{
-	CString strCard;
-	strCard.Format(_T("%08X%04X%04X%08X%08X"), nDeviceID, nUnitID, nCardType, 0x00000000, nPrice);
-	return strCard;
-}
-
-
-void CCardOperator::DecodePriceCard(const CString & strCard, int & nDeviceID, int  & nUnitID, int  & nCardType, int & nPrice)
-{
-	nDeviceID = _tcstol(strCard.Mid(0, 8), NULL, 16);
-	nUnitID = _tcstol(strCard.Mid(8, 4), NULL, 16);
-	nCardType = _tcstol(strCard.Mid(12, 4), NULL, 16);
-	nPrice = _tcstol(strCard.Mid(24, 8), NULL, 16);
-}
-
-
-CString CCardOperator::EncodeQueryCard(int nDeviceID, int nUnitID, int nCardType)
-{
-	CString strCard;
-	strCard.Format(_T("%08X%04X%04X%08X%08X"), nDeviceID, nUnitID, nCardType, 0x66666666, 0x66666666);
-	return strCard;
-}
-
-
-void CCardOperator::DecodeQueryCard(const CString & strCard, int & nDeviceID, int  & nUnitID, int  & nCardType)
-{
-	DecodeCard(strCard, nDeviceID, nUnitID, nCardType);
-}
-
-
-CString CCardOperator::EncodeTestCard(int nDeviceID, int nUnitID, int nCardType)
-{
-	CString strCard;
-	strCard.Format(_T("%08X%04X%04X%08X%08X"), nDeviceID, nUnitID, nCardType, 0x66666666, 0x66666666);
-	return strCard;
-}
-
-
-void CCardOperator::DecodeTestCard(const CString & strCard, int & nDeviceID, int  & nUnitID, int  & nCardType)
-{
-	DecodeCard(strCard, nDeviceID, nUnitID, nCardType);
 }

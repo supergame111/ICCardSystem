@@ -111,19 +111,7 @@
     <ClInclude Include="CToolReadCard.h">
       <Filter>头文件</Filter>
     </ClInclude>
-    <ClInclude Include="CToolResetCard.h">
-      <Filter>头文件</Filter>
-    </ClInclude>
-    <ClInclude Include="CToolTestCard.h">
-      <Filter>头文件</Filter>
-    </ClInclude>
-    <ClInclude Include="CToolQueryCard.h">
-      <Filter>头文件</Filter>
-    </ClInclude>
     <ClInclude Include="CToolSetCard.h">
-      <Filter>头文件</Filter>
-    </ClInclude>
-    <ClInclude Include="CToolPriceCard.h">
       <Filter>头文件</Filter>
     </ClInclude>
     <ClInclude Include="CUserInfoQuery.h">
@@ -166,6 +154,9 @@
       <Filter>头文件</Filter>
     </ClInclude>
     <ClInclude Include="ZOperatorExcelFile.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="CToolLicenseCard.h">
       <Filter>头文件</Filter>
     </ClInclude>
   </ItemGroup>
@@ -257,19 +248,7 @@
     <ClCompile Include="CToolReadCard.cpp">
       <Filter>源文件</Filter>
     </ClCompile>
-    <ClCompile Include="CToolResetCard.cpp">
-      <Filter>源文件</Filter>
-    </ClCompile>
-    <ClCompile Include="CToolTestCard.cpp">
-      <Filter>源文件</Filter>
-    </ClCompile>
-    <ClCompile Include="CToolQueryCard.cpp">
-      <Filter>源文件</Filter>
-    </ClCompile>
     <ClCompile Include="CToolSetCard.cpp">
-      <Filter>源文件</Filter>
-    </ClCompile>
-    <ClCompile Include="CToolPriceCard.cpp">
       <Filter>源文件</Filter>
     </ClCompile>
     <ClCompile Include="CUserInfoQuery.cpp">
@@ -294,6 +273,9 @@
       <Filter>源文件</Filter>
     </ClCompile>
     <ClCompile Include="ZOperatorExcelFile.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="CToolLicenseCard.cpp">
       <Filter>源文件</Filter>
     </ClCompile>
   </ItemGroup>
