@@ -96,13 +96,7 @@
     <ClInclude Include="CReturnDepositRecordDB.h">
       <Filter>头文件</Filter>
     </ClInclude>
-    <ClInclude Include="CUserReopenCard.h">
-      <Filter>头文件</Filter>
-    </ClInclude>
     <ClInclude Include="CRecordDB.h">
-      <Filter>头文件</Filter>
-    </ClInclude>
-    <ClInclude Include="CReopenCardRecordDB.h">
       <Filter>头文件</Filter>
     </ClInclude>
     <ClInclude Include="CUserCloseCard.h">
@@ -239,13 +233,7 @@
     <ClCompile Include="CReturnDepositRecordDB.cpp">
       <Filter>源文件</Filter>
     </ClCompile>
-    <ClCompile Include="CUserReopenCard.cpp">
-      <Filter>源文件</Filter>
-    </ClCompile>
     <ClCompile Include="CRecordDB.cpp">
-      <Filter>源文件</Filter>
-    </ClCompile>
-    <ClCompile Include="CReopenCardRecordDB.cpp">
       <Filter>源文件</Filter>
     </ClCompile>
     <ClCompile Include="CUserCloseCard.cpp">

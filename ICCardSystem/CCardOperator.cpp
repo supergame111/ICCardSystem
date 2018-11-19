@@ -20,7 +20,8 @@ bool CCardOperator::ReadCard(CString & strCard, CString & strError, bool bIsCtrl
 		ctrl.ControlLED(0x16, 10);
 	}
 	ISO14443A_MF block_0A;
-	if (!block_0A.MF_Read(strCard))
+	int nRtn_0A = block_0A.MF_Read(strCard);
+	if (!nRtn_0A)
 	{
 		if (bIsCtrlReader)
 		{
@@ -32,45 +33,56 @@ bool CCardOperator::ReadCard(CString & strCard, CString & strError, bool bIsCtrl
 	}
 	else
 	{
-		ISO14443A_MF block_0B(0x00, 0x0B, 1, 0x02, _T("FFFFFFFFFFFF"));
-		int nRtn_0B = block_0B.MF_Write(_T("53546364737408778F69010203070901"));
-		if (!nRtn_0B)
+		strError = block_0A.ErrorInfo(nRtn_0A);
+		if (nRtn_0A == 0x01)
 		{
-			int nRtn_0A = block_0A.MF_Read(strCard);
-			if (!nRtn_0A)
-			{
-				if (bIsCtrlReader)
-				{
-					ISO14443A_MF ctrl;
-					ctrl.ControlLED(0x16, 0);
-					ctrl.ControlBuzzer(0x16, 1);
-				}
-				return true;
-			}
-			else
-			{
-				strError = block_0A.ErrorInfo(nRtn_0A);
-				if (nRtn_0A == 0x01)
-				{
-					strError += _T("\r\n") + block_0A.ErrorReason(block_0A.GetErrorCode());
-				}
-			}
+			strError += _T("\r\n") + block_0A.ErrorReason(block_0A.GetErrorCode());
 		}
-		else
+		if (bIsCtrlReader)
 		{
-			strError = block_0B.ErrorInfo(nRtn_0B);
-			if (nRtn_0B == 0x01)
-			{
-				strError += _T("\r\n") + block_0B.ErrorReason(block_0B.GetErrorCode());
-			}
+			ISO14443A_MF ctrl;
+			ctrl.ControlLED(0x16, 0);
 		}
+		return false;
 	}
+}
+
+
+bool CCardOperator::ReadCardNo(CString & strCardNo, CString & strError, bool bIsCtrlReader)
+{
+	CString strCard;
 	if (bIsCtrlReader)
 	{
 		ISO14443A_MF ctrl;
-		ctrl.ControlLED(0x16, 0);
+		ctrl.ControlLED(0x16, 10);
 	}
-	return false;
+	ISO14443A_MF block_00(0x00, 0x00, 1, 0x00, _T("FFFFFFFFFFFF"));
+	int nRtn_0A = block_00.MF_Read(strCard);
+	if (!nRtn_0A)
+	{
+		strCardNo.Format(_T("%d"), _tcstol(strCard.Left(8), NULL, 16));
+		if (bIsCtrlReader)
+		{
+			ISO14443A_MF ctrl;
+			ctrl.ControlLED(0x16, 0);
+			ctrl.ControlBuzzer(0x16, 1);
+		}
+		return true;
+	}
+	else
+	{
+		strError = block_00.ErrorInfo(nRtn_0A);
+		if (nRtn_0A == 0x01)
+		{
+			strError += _T("\r\n") + block_00.ErrorReason(block_00.GetErrorCode());
+		}
+		if (bIsCtrlReader)
+		{
+			ISO14443A_MF ctrl;
+			ctrl.ControlLED(0x16, 0);
+		}
+		return false;
+	}
 }
 
 
@@ -82,7 +94,8 @@ bool CCardOperator::WriteCard(const CString & strCard, CString & strError, bool 
 		ctrl.ControlLED(0x16, 10);
 	}
 	ISO14443A_MF block_0A;
-	if (!block_0A.MF_Write(strCard))
+	int nRtn_0A = block_0A.MF_Write(strCard);
+	if (!nRtn_0A)
 	{
 		if (bIsCtrlReader)
 		{
@@ -94,45 +107,18 @@ bool CCardOperator::WriteCard(const CString & strCard, CString & strError, bool 
 	}
 	else
 	{
-		ISO14443A_MF block_0B(0x00, 0x0B, 1, 0x02, _T("FFFFFFFFFFFF"));
-		int nRtn_0B = block_0B.MF_Write(_T("53546364737408778F69010203070901"));
-		if (!nRtn_0B)
+		strError = block_0A.ErrorInfo(nRtn_0A);
+		if (nRtn_0A == 0x01)
 		{
-			int nRtn_0A = block_0A.MF_Write(strCard);
-			if (!nRtn_0A)
-			{
-				if (bIsCtrlReader)
-				{
-					ISO14443A_MF ctrl;
-					ctrl.ControlLED(0x16, 0);
-					ctrl.ControlBuzzer(0x16, 1);
-				}
-				return true;
-			}
-			else
-			{
-				strError = block_0A.ErrorInfo(nRtn_0A);
-				if (nRtn_0A == 0x01)
-				{
-					strError += _T("\r\n") + block_0A.ErrorReason(block_0A.GetErrorCode());
-				}
-			}
+			strError += _T("\r\n") + block_0A.ErrorReason(block_0A.GetErrorCode());
 		}
-		else
+		if (bIsCtrlReader)
 		{
-			strError = block_0B.ErrorInfo(nRtn_0B);
-			if (nRtn_0B == 0x01)
-			{
-				strError += _T("\r\n") + block_0B.ErrorReason(block_0B.GetErrorCode());
-			}
+			ISO14443A_MF ctrl;
+			ctrl.ControlLED(0x16, 0);
 		}
+		return false;
 	}
-	if (bIsCtrlReader)
-	{
-		ISO14443A_MF ctrl;
-		ctrl.ControlLED(0x16, 0);
-	}
-	return false;
 }
 
 
@@ -144,16 +130,8 @@ bool CCardOperator::ClearUserCard(bool bIsCtrlReader)
 		ctrl.ControlLED(0x16, 10);
 	}
 	ISO14443A_MF block_0A;
-	if (block_0A.MF_Write(_T("00000000000000000000000000000000")))
-	{
-		if (bIsCtrlReader)
-		{
-			ISO14443A_MF ctrl;
-			ctrl.ControlLED(0x16, 0);
-		}
-		return false;
-	}
-	else
+	int nRtn_0A = block_0A.MF_Write(_T("00000000000000000000000000000000"));
+	if (!nRtn_0A)
 	{
 		if (bIsCtrlReader)
 		{
@@ -162,6 +140,15 @@ bool CCardOperator::ClearUserCard(bool bIsCtrlReader)
 			ctrl.ControlBuzzer(0x16, 1);
 		}
 		return true;
+	}
+	else
+	{
+		if (bIsCtrlReader)
+		{
+			ISO14443A_MF ctrl;
+			ctrl.ControlLED(0x16, 0);
+		}
+		return false;
 	}
 }
 

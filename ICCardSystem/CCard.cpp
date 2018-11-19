@@ -85,3 +85,9 @@ CString CCard::GetTimeCloseCard() const
 {
 	return m_strTimeCloseCard;
 }
+
+
+void CCard::SetEmployeeIDCloseCard(int nEmployeeIDCloseCard)
+{
+	m_nEmployeeIDCloseCard = nEmployeeIDCloseCard;
+}

@@ -198,7 +198,6 @@
     <ClInclude Include="CRecord.h" />
     <ClInclude Include="CRecordDB.h" />
     <ClInclude Include="CRefundRecordDB.h" />
-    <ClInclude Include="CReopenCardRecordDB.h" />
     <ClInclude Include="CReturnDepositRecordDB.h" />
     <ClInclude Include="CToolLicenseCard.h" />
     <ClInclude Include="CToolReadCard.h" />
@@ -215,7 +214,6 @@
     <ClInclude Include="CUserPrestore.h" />
     <ClInclude Include="CUserPrestoreStatistics.h" />
     <ClInclude Include="CUserRefund.h" />
-    <ClInclude Include="CUserReopenCard.h" />
     <ClInclude Include="CUserReturnDeposit.h" />
     <ClInclude Include="CWorkbook.h" />
     <ClInclude Include="CWorkbooks.h" />
@@ -248,7 +246,6 @@
     <ClCompile Include="CRecord.cpp" />
     <ClCompile Include="CRecordDB.cpp" />
     <ClCompile Include="CRefundRecordDB.cpp" />
-    <ClCompile Include="CReopenCardRecordDB.cpp" />
     <ClCompile Include="CReturnDepositRecordDB.cpp" />
     <ClCompile Include="CToolLicenseCard.cpp" />
     <ClCompile Include="CToolReadCard.cpp" />
@@ -265,7 +262,6 @@
     <ClCompile Include="CUserPrestore.cpp" />
     <ClCompile Include="CUserPrestoreStatistics.cpp" />
     <ClCompile Include="CUserRefund.cpp" />
-    <ClCompile Include="CUserReopenCard.cpp" />
     <ClCompile Include="CUserReturnDeposit.cpp" />
     <ClCompile Include="ICCardSystem.cpp" />
     <ClCompile Include="ICCardSystemDoc.cpp" />

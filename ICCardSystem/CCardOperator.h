@@ -12,6 +12,7 @@ public:
 	CCardOperator();
 	virtual ~CCardOperator();
 	static bool ReadCard(CString & strCard, CString & strError, bool bIsCtrlReader = false);
+	static bool ReadCardNo(CString & strCardNo, CString & strError, bool bIsCtrlReader = false);
 	static bool WriteCard(const CString & strCard, CString & strError, bool bIsCtrlReader = false);
 	static bool ClearUserCard(bool bIsCtrlReader = false);
 	static void DecodeCard(const CString & strCard, int & nCardNo, int  & nLicense, int  & nCardType);

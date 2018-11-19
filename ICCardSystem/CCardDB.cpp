@@ -50,6 +50,20 @@ bool CCardDB::Insert(const CCard & card)
 }
 
 
+bool CCardDB::UpdateCloseCard(const CCard & card)
+{
+	CreateTable();
+	ZSqlite3 zsql;
+	zsql.OpenDB(m_strPathDB);
+	CString strSql, strError;
+	strSql.Format(_T("UPDATE Card SET EmployeeIDCloseCard=%d,TimeCloseCard=datetime('now','localtime') WHERE ID=%d"), card.GetEmployeeIDCloseCard(), card.GetID());
+	if (zsql.ExecSQL(strSql, &strError) == ZSqlite3::ERROR_OK)
+		return true;
+	else
+		return false;
+}
+
+
 bool CCardDB::Select(const CString & strSql, std::vector<CCard> & vec_card)
 {
 	vec_card.clear();

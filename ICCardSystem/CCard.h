@@ -32,5 +32,6 @@ public:
 	CString GetTimeOpenCard() const;
 	int GetEmployeeIDCloseCard() const;
 	CString GetTimeCloseCard() const;
+	void SetEmployeeIDCloseCard(int nEmployeeIDCloseCard);
 };
 
