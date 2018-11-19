@@ -1,0 +1,304 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|Win32">
+      <Configuration>Debug</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|Win32">
+      <Configuration>Release</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Debug|x64">
+      <Configuration>Debug</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|x64">
+      <Configuration>Release</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <VCProjectVersion>15.0</VCProjectVersion>
+    <ProjectGuid>{1173505B-8824-4E0C-8798-32B12430916E}</ProjectGuid>
+    <Keyword>MFCProj</Keyword>
+    <RootNamespace>ICCardSystem</RootNamespace>
+    <WindowsTargetPlatformVersion>10.0.17134.0</WindowsTargetPlatformVersion>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <PlatformToolset>v141_xp</PlatformToolset>
+    <CharacterSet>Unicode</CharacterSet>
+    <UseOfMfc>Dynamic</UseOfMfc>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <PlatformToolset>v141_xp</PlatformToolset>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+    <CharacterSet>Unicode</CharacterSet>
+    <UseOfMfc>Dynamic</UseOfMfc>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <PlatformToolset>v141</PlatformToolset>
+    <CharacterSet>Unicode</CharacterSet>
+    <UseOfMfc>Dynamic</UseOfMfc>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <PlatformToolset>v141</PlatformToolset>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+    <CharacterSet>Unicode</CharacterSet>
+    <UseOfMfc>Dynamic</UseOfMfc>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Label="Shared">
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <LinkIncremental>true</LinkIncremental>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <LinkIncremental>true</LinkIncremental>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <LinkIncremental>false</LinkIncremental>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <LinkIncremental>false</LinkIncremental>
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <ClCompile>
+      <PrecompiledHeader>Use</PrecompiledHeader>
+      <WarningLevel>Level3</WarningLevel>
+      <Optimization>Disabled</Optimization>
+      <SDLCheck>true</SDLCheck>
+      <PreprocessorDefinitions>WIN32;_WINDOWS;_DEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+    </ClCompile>
+    <Link>
+      <SubSystem>Windows</SubSystem>
+    </Link>
+    <Midl>
+      <MkTypLibCompatible>false</MkTypLibCompatible>
+      <ValidateAllParameters>true</ValidateAllParameters>
+      <PreprocessorDefinitions>_DEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+    </Midl>
+    <ResourceCompile>
+      <Culture>0x0804</Culture>
+      <PreprocessorDefinitions>_DEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>$(IntDir);%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ResourceCompile>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <ClCompile>
+      <PrecompiledHeader>Use</PrecompiledHeader>
+      <WarningLevel>Level3</WarningLevel>
+      <Optimization>Disabled</Optimization>
+      <SDLCheck>true</SDLCheck>
+      <PreprocessorDefinitions>_WINDOWS;_DEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+    </ClCompile>
+    <Link>
+      <SubSystem>Windows</SubSystem>
+    </Link>
+    <Midl>
+      <MkTypLibCompatible>false</MkTypLibCompatible>
+      <ValidateAllParameters>true</ValidateAllParameters>
+      <PreprocessorDefinitions>_DEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+    </Midl>
+    <ResourceCompile>
+      <Culture>0x0804</Culture>
+      <PreprocessorDefinitions>_DEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>$(IntDir);%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ResourceCompile>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <ClCompile>
+      <PrecompiledHeader>Use</PrecompiledHeader>
+      <WarningLevel>Level3</WarningLevel>
+      <Optimization>MaxSpeed</Optimization>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <SDLCheck>true</SDLCheck>
+      <PreprocessorDefinitions>WIN32;_WINDOWS;NDEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+    </ClCompile>
+    <Link>
+      <SubSystem>Windows</SubSystem>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <OptimizeReferences>true</OptimizeReferences>
+    </Link>
+    <Midl>
+      <MkTypLibCompatible>false</MkTypLibCompatible>
+      <ValidateAllParameters>true</ValidateAllParameters>
+      <PreprocessorDefinitions>NDEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+    </Midl>
+    <ResourceCompile>
+      <Culture>0x0804</Culture>
+      <PreprocessorDefinitions>NDEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>$(IntDir);%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ResourceCompile>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <ClCompile>
+      <PrecompiledHeader>Use</PrecompiledHeader>
+      <WarningLevel>Level3</WarningLevel>
+      <Optimization>MaxSpeed</Optimization>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <SDLCheck>true</SDLCheck>
+      <PreprocessorDefinitions>_WINDOWS;NDEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+    </ClCompile>
+    <Link>
+      <SubSystem>Windows</SubSystem>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <OptimizeReferences>true</OptimizeReferences>
+    </Link>
+    <Midl>
+      <MkTypLibCompatible>false</MkTypLibCompatible>
+      <ValidateAllParameters>true</ValidateAllParameters>
+      <PreprocessorDefinitions>NDEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+    </Midl>
+    <ResourceCompile>
+      <Culture>0x0804</Culture>
+      <PreprocessorDefinitions>NDEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>$(IntDir);%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ResourceCompile>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <ClInclude Include="CApplication.h" />
+    <ClInclude Include="CCardOperator.h" />
+    <ClInclude Include="CEmployee.h" />
+    <ClInclude Include="CEmployeeDB.h" />
+    <ClInclude Include="CEmployeeEdit.h" />
+    <ClInclude Include="CExcelExport.h" />
+    <ClInclude Include="CLogin.h" />
+    <ClInclude Include="CPasswordEdit.h" />
+    <ClInclude Include="CPrestoreRecordDB.h" />
+    <ClInclude Include="CRange.h" />
+    <ClInclude Include="CRecord.h" />
+    <ClInclude Include="CRecordDB.h" />
+    <ClInclude Include="CRefundRecordDB.h" />
+    <ClInclude Include="CReopenCardRecordDB.h" />
+    <ClInclude Include="CReturnDepositRecordDB.h" />
+    <ClInclude Include="CToolPriceCard.h" />
+    <ClInclude Include="CToolQueryCard.h" />
+    <ClInclude Include="CToolReadCard.h" />
+    <ClInclude Include="CToolResetCard.h" />
+    <ClInclude Include="CToolSetCard.h" />
+    <ClInclude Include="CToolTestCard.h" />
+    <ClInclude Include="CUnionDB.h" />
+    <ClInclude Include="CUser.h" />
+    <ClInclude Include="CUserCloseCard.h" />
+    <ClInclude Include="CUserDB.h" />
+    <ClInclude Include="CUserIncomeStatistics.h" />
+    <ClInclude Include="CUserInfoEdit.h" />
+    <ClInclude Include="CUserInfoQuery.h" />
+    <ClInclude Include="CUserLogQuery.h" />
+    <ClInclude Include="CUserOpenCard.h" />
+    <ClInclude Include="CUserPrestore.h" />
+    <ClInclude Include="CUserPrestoreStatistics.h" />
+    <ClInclude Include="CUserRefund.h" />
+    <ClInclude Include="CUserReopenCard.h" />
+    <ClInclude Include="CUserReturnDeposit.h" />
+    <ClInclude Include="CWorkbook.h" />
+    <ClInclude Include="CWorkbooks.h" />
+    <ClInclude Include="CWorksheet.h" />
+    <ClInclude Include="CWorksheets.h" />
+    <ClInclude Include="ICCardSystem.h" />
+    <ClInclude Include="ICCardSystemDoc.h" />
+    <ClInclude Include="ICCardSystemView.h" />
+    <ClInclude Include="ISO14443A_MF.h" />
+    <ClInclude Include="MainFrm.h" />
+    <ClInclude Include="Resource.h" />
+    <ClInclude Include="stdafx.h" />
+    <ClInclude Include="targetver.h" />
+    <ClInclude Include="ZClassLib.h" />
+    <ClInclude Include="ZOperatorExcelFile.h" />
+    <ClInclude Include="ZSqlite3.h" />
+    <ClInclude Include="ZUtil.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="CCardOperator.cpp" />
+    <ClCompile Include="CEmployee.cpp" />
+    <ClCompile Include="CEmployeeDB.cpp" />
+    <ClCompile Include="CEmployeeEdit.cpp" />
+    <ClCompile Include="CExcelExport.cpp" />
+    <ClCompile Include="CLogin.cpp" />
+    <ClCompile Include="CPasswordEdit.cpp" />
+    <ClCompile Include="CPrestoreRecordDB.cpp" />
+    <ClCompile Include="CRecord.cpp" />
+    <ClCompile Include="CRecordDB.cpp" />
+    <ClCompile Include="CRefundRecordDB.cpp" />
+    <ClCompile Include="CReopenCardRecordDB.cpp" />
+    <ClCompile Include="CReturnDepositRecordDB.cpp" />
+    <ClCompile Include="CToolPriceCard.cpp" />
+    <ClCompile Include="CToolQueryCard.cpp" />
+    <ClCompile Include="CToolReadCard.cpp" />
+    <ClCompile Include="CToolResetCard.cpp" />
+    <ClCompile Include="CToolSetCard.cpp" />
+    <ClCompile Include="CToolTestCard.cpp" />
+    <ClCompile Include="CUnionDB.cpp" />
+    <ClCompile Include="CUser.cpp" />
+    <ClCompile Include="CUserCloseCard.cpp" />
+    <ClCompile Include="CUserDB.cpp" />
+    <ClCompile Include="CUserIncomeStatistics.cpp" />
+    <ClCompile Include="CUserInfoEdit.cpp" />
+    <ClCompile Include="CUserInfoQuery.cpp" />
+    <ClCompile Include="CUserLogQuery.cpp" />
+    <ClCompile Include="CUserOpenCard.cpp" />
+    <ClCompile Include="CUserPrestore.cpp" />
+    <ClCompile Include="CUserPrestoreStatistics.cpp" />
+    <ClCompile Include="CUserRefund.cpp" />
+    <ClCompile Include="CUserReopenCard.cpp" />
+    <ClCompile Include="CUserReturnDeposit.cpp" />
+    <ClCompile Include="ICCardSystem.cpp" />
+    <ClCompile Include="ICCardSystemDoc.cpp" />
+    <ClCompile Include="ICCardSystemView.cpp" />
+    <ClCompile Include="ISO14443A_MF.cpp" />
+    <ClCompile Include="MainFrm.cpp" />
+    <ClCompile Include="stdafx.cpp">
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Create</PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">Create</PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Create</PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|x64'">Create</PrecompiledHeader>
+    </ClCompile>
+    <ClCompile Include="ZOperatorExcelFile.cpp" />
+    <ClCompile Include="ZSqlite3.cpp" />
+    <ClCompile Include="ZUtil.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ResourceCompile Include="ICCardSystem.rc" />
+  </ItemGroup>
+  <ItemGroup>
+    <Image Include="res\BkGnd.bmp" />
+    <Image Include="res\ICCardSystem.ico" />
+    <Image Include="res\ICCardSystemDoc.ico" />
+    <Image Include="res\Toolbar.bmp" />
+    <Image Include="res\Toolbar256.bmp" />
+    <Image Include="res\userimages.bmp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="res\ICCardSystem.rc2" />
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+</Project>

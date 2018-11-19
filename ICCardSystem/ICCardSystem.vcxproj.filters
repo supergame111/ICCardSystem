@@ -1,0 +1,330 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="源文件">
+      <UniqueIdentifier>{4FC737F1-C7A5-4376-A066-2A32D752A2FF}</UniqueIdentifier>
+      <Extensions>cpp;c;cc;cxx;def;odl;idl;hpj;bat;asm;asmx</Extensions>
+    </Filter>
+    <Filter Include="头文件">
+      <UniqueIdentifier>{93995380-89BD-4b04-88EB-625FBE52EBFB}</UniqueIdentifier>
+      <Extensions>h;hh;hpp;hxx;hm;inl;inc;ipp;xsd</Extensions>
+    </Filter>
+    <Filter Include="资源文件">
+      <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
+      <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="ICCardSystem.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="stdafx.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="targetver.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="MainFrm.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="ICCardSystemDoc.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="ICCardSystemView.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="Resource.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="CUserInfoEdit.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="ZSqlite3.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="ZClassLib.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="CUserOpenCard.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="ZUtil.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="CUser.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="CUserDB.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="CEmployee.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="CEmployeeDB.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="CEmployeeEdit.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="CLogin.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="ISO14443A_MF.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="CUserPrestore.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="CCardOperator.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="CPrestoreRecordDB.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="CUserRefund.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="CRecord.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="CRefundRecordDB.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="CUserReturnDeposit.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="CReturnDepositRecordDB.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="CUserReopenCard.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="CRecordDB.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="CReopenCardRecordDB.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="CUserCloseCard.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="CToolReadCard.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="CToolResetCard.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="CToolTestCard.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="CToolQueryCard.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="CToolSetCard.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="CToolPriceCard.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="CUserInfoQuery.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="CPasswordEdit.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="CUserLogQuery.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="CUnionDB.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="CUserIncomeStatistics.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="CUserPrestoreStatistics.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="CApplication.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="CWorkbook.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="CWorksheet.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="CWorkbooks.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="CWorksheets.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="CRange.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="CExcelExport.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="ZOperatorExcelFile.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="ICCardSystem.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="stdafx.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="MainFrm.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="ICCardSystemDoc.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="ICCardSystemView.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="CUserInfoEdit.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="ZSqlite3.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="CUserOpenCard.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="ZUtil.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="CUser.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="CUserDB.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="CEmployee.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="CEmployeeDB.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="CEmployeeEdit.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="CLogin.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="ISO14443A_MF.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="CUserPrestore.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="CCardOperator.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="CPrestoreRecordDB.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="CUserRefund.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="CRecord.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="CRefundRecordDB.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="CUserReturnDeposit.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="CReturnDepositRecordDB.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="CUserReopenCard.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="CRecordDB.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="CReopenCardRecordDB.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="CUserCloseCard.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="CToolReadCard.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="CToolResetCard.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="CToolTestCard.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="CToolQueryCard.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="CToolSetCard.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="CToolPriceCard.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="CUserInfoQuery.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="CPasswordEdit.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="CUserLogQuery.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="CUnionDB.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="CUserIncomeStatistics.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="CUserPrestoreStatistics.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="CExcelExport.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="ZOperatorExcelFile.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ResourceCompile Include="ICCardSystem.rc">
+      <Filter>资源文件</Filter>
+    </ResourceCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <Image Include="res\userimages.bmp">
+      <Filter>资源文件</Filter>
+    </Image>
+    <Image Include="res\ICCardSystemDoc.ico">
+      <Filter>资源文件</Filter>
+    </Image>
+    <Image Include="res\ICCardSystem.ico">
+      <Filter>资源文件</Filter>
+    </Image>
+    <Image Include="res\Toolbar.bmp">
+      <Filter>资源文件</Filter>
+    </Image>
+    <Image Include="res\Toolbar256.bmp">
+      <Filter>资源文件</Filter>
+    </Image>
+    <Image Include="res\BkGnd.bmp">
+      <Filter>资源文件</Filter>
+    </Image>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="res\ICCardSystem.rc2">
+      <Filter>资源文件</Filter>
+    </None>
+  </ItemGroup>
+</Project>
