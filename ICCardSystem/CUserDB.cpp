@@ -26,9 +26,9 @@ void CUserDB::CreateTable()
 				IDNo NVARCHAR(100),\
 				PhoneNo NVARCHAR(100),\
 				Addr NVARCHAR(100),\
-				UnitID INT,\
+				License INT,\
 				UnitName NVARCHAR(100),\
-				DeviceID INT,\
+				CardNo INT,\
 				TotalAmount INT DEFAULT 0,\
 				Deposit INT DEFAULT 0,\
 				State INT DEFAULT 0,\
@@ -51,7 +51,7 @@ bool CUserDB::Insert(const CUser & user)
 	ZSqlite3 zsql;
 	zsql.OpenDB(m_strPathDB);
 	CString strSql, strError;
-	strSql.Format(_T("INSERT INTO User VALUES (%d,'%s','%s','%s','%s',%d,'%s',NULL,%d,%d,%d,'%s',NULL,NULL,NULL,NULL,%d,datetime('now','localtime'),%d,datetime('now','localtime'))"),user.GetID(), user.GetName(), user.GetIDNo(), user.GetPhoneNo(), user.GetAddr(), user.GetUnitID(), user.GetUnitName(),user.GetTotalAmount(),user.GetDeposit(),user.GetState(),user.GetNoteInfo(), user.GetEmployeeIDAdd(), user.GetEmployeeIDLastModify());
+	strSql.Format(_T("INSERT INTO User VALUES (%d,'%s','%s','%s','%s',%d,'%s',NULL,%d,%d,%d,'%s',NULL,NULL,NULL,NULL,%d,datetime('now','localtime'),%d,datetime('now','localtime'))"),user.GetID(), user.GetName(), user.GetIDNo(), user.GetPhoneNo(), user.GetAddr(), user.GetLicense(), user.GetUnitName(),user.GetTotalAmount(),user.GetDeposit(),user.GetState(),user.GetNoteInfo(), user.GetEmployeeIDAdd(), user.GetEmployeeIDLastModify());
 	if (zsql.ExecSQL(strSql, &strError) == ZSqlite3::ERROR_OK)
 		return true;
 	else
@@ -65,7 +65,7 @@ bool CUserDB::UpdateModifyInfo(const CUser & user)
 	ZSqlite3 zsql;
 	zsql.OpenDB(m_strPathDB);
 	CString strSql, strError;
-	strSql.Format(_T("UPDATE User SET Name='%s',IDNo='%s',PhoneNo='%s',Addr='%s',UnitID=%d,UnitName='%s',DeviceID=%d,NoteInfo='%s',EmployeeIDLastModify=%d,TimeLastModify=datetime('now','localtime') WHERE ID=%d"), user.GetName(), user.GetIDNo(), user.GetPhoneNo(), user.GetAddr(), user.GetUnitID(), user.GetUnitName(), user.GetDeviceID(),user.GetNoteInfo(), user.GetEmployeeIDLastModify(), user.GetID());
+	strSql.Format(_T("UPDATE User SET Name='%s',IDNo='%s',PhoneNo='%s',Addr='%s',License=%d,UnitName='%s',CardNo=%d,NoteInfo='%s',EmployeeIDLastModify=%d,TimeLastModify=datetime('now','localtime') WHERE ID=%d"), user.GetName(), user.GetIDNo(), user.GetPhoneNo(), user.GetAddr(), user.GetLicense(), user.GetUnitName(), user.GetCardNo(),user.GetNoteInfo(), user.GetEmployeeIDLastModify(), user.GetID());
 	if (zsql.ExecSQL(strSql, &strError) == ZSqlite3::ERROR_OK)
 		return true;
 	else
@@ -79,7 +79,7 @@ bool CUserDB::UpdateOpenCard(const CUser & user)
 	ZSqlite3 zsql;
 	zsql.OpenDB(m_strPathDB);
 	CString strSql, strError;
-	strSql.Format(_T("UPDATE User SET DeviceID=%d,Deposit=%d,State=%d,EmployeeIDOpenCard=%d,TimeOpenCard=datetime('now','localtime') WHERE ID=%d"), user.GetDeviceID(), user.GetDeposit(), user.GetState(),user.GetEmployeeIDOpenCard(), user.GetID());
+	strSql.Format(_T("UPDATE User SET CardNo=%d,Deposit=%d,State=%d,EmployeeIDOpenCard=%d,TimeOpenCard=datetime('now','localtime') WHERE ID=%d"), user.GetCardNo(), user.GetDeposit(), user.GetState(),user.GetEmployeeIDOpenCard(), user.GetID());
 	if (zsql.ExecSQL(strSql, &strError) == ZSqlite3::ERROR_OK)
 		return true;
 	else

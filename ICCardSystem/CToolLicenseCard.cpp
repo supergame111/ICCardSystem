@@ -49,10 +49,10 @@ BOOL CToolLicenseCard::OnInitDialog()
 void CToolLicenseCard::OnBnClickedButtonLicensecard()
 {
 	// TODO: 在此添加控件通知处理程序代码
-	int nUnitID;
-	nUnitID = GetDlgItemInt(IDC_EDIT_LICENSE);
+	int nLicense;
+	nLicense = GetDlgItemInt(IDC_EDIT_LICENSE);
 	CString strCard, strError;
-	strCard = CCardOperator::EncodeLicenseCard(0x00000000, nUnitID, CCardOperator::TYPE_LICENSE);
+	strCard = CCardOperator::EncodeLicenseCard(0x00000000, nLicense, CCardOperator::TYPE_LICENSE);
 	if (CCardOperator::WriteCard(strCard, strError, true))
 		AfxMessageBox(_T("写卡成功!"));
 	else

@@ -15,9 +15,9 @@ private:
 	CString m_strIDNo;
 	CString m_strPhoneNo;
 	CString m_strAddr;
-	int m_nUnitID;
+	int m_nLicense;
 	CString m_strUnitName;
-	int m_nDeviceID;
+	int m_nCardNo;
 	int m_nTotalAmount;//单位:分
 	int m_nDeposit;//单位:分
 	int m_nState;
@@ -32,16 +32,16 @@ private:
 	CString m_strTimeLastModify;
 public:
 	CUser();
-	CUser(int nID, CString strName, CString strIDNo, CString strPhoneNo, CString strAddr, int nUnitID, CString strUnitName, int nDeviceID, int nTotalAmount, int nDeposit, int nState, CString strNoteInfo, int nEmployeeIDOpenCard, CString strTimeOpenCard,  int nEmployeeIDCloseCard, CString strTimeCloseCard, int nEmployeeIDAdd, CString strTimeAdd, int nEmployeeIDLastModify, CString strTimeLastModify);
+	CUser(int nID, CString strName, CString strIDNo, CString strPhoneNo, CString strAddr, int nLicense, CString strUnitName, int nCardNo, int nTotalAmount, int nDeposit, int nState, CString strNoteInfo, int nEmployeeIDOpenCard, CString strTimeOpenCard,  int nEmployeeIDCloseCard, CString strTimeCloseCard, int nEmployeeIDAdd, CString strTimeAdd, int nEmployeeIDLastModify, CString strTimeLastModify);
 	virtual ~CUser();
 	int GetID() const;
 	CString GetName() const;
 	CString GetIDNo() const;
 	CString GetPhoneNo() const;
 	CString GetAddr() const;
-	int GetUnitID() const;
+	int GetLicense() const;
 	CString GetUnitName() const;
-	int GetDeviceID() const;
+	int GetCardNo() const;
 	int GetTotalAmount() const;
 	int GetDeposit() const;
 	int GetState() const;
@@ -59,9 +59,9 @@ public:
 	void SetIDNo(const CString & strIDNo);
 	void SetPhoneNo(const CString & strPhoneNo);
 	void SetAddr(const CString & strAddr);
-	void SetUnitID(int nUnitID);
+	void SetLicense(int nLicense);
 	void SetUnitName(const CString & strUnitName);
-	void SetDeviceID(int nDeviceID);
+	void SetCardNo(int nCardNo);
 	void SetTotalAmount(int nTotalAmount);
 	void SetDeposit(int nDeposit);
 	void SetState(int nState);

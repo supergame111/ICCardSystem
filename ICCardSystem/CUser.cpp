@@ -7,15 +7,15 @@ CUser::CUser()
 }
 
 
-CUser::CUser(int nID,CString strName,CString strIDNo,CString strPhoneNo,CString strAddr,int nUnitID,CString strUnitName,int nDeviceID,int nTotalAmount,int nDeposit,int nState,CString strNoteInfo, int nEmployeeIDOpenCard, CString strTimeOpenCard, int nEmployeeIDCloseCard, CString strTimeCloseCard, int nEmployeeIDAdd, CString strTimeAdd, int nEmployeeIDLastModify, CString strTimeLastModify)
+CUser::CUser(int nID,CString strName,CString strIDNo,CString strPhoneNo,CString strAddr,int nLicense,CString strUnitName,int nCardNo,int nTotalAmount,int nDeposit,int nState,CString strNoteInfo, int nEmployeeIDOpenCard, CString strTimeOpenCard, int nEmployeeIDCloseCard, CString strTimeCloseCard, int nEmployeeIDAdd, CString strTimeAdd, int nEmployeeIDLastModify, CString strTimeLastModify)
 	: m_nID(nID)
 	, m_strName(strName)
 	, m_strIDNo(strIDNo)
 	, m_strPhoneNo(strPhoneNo)
 	, m_strAddr(strAddr)
-	, m_nUnitID(nUnitID)
+	, m_nLicense(nLicense)
 	, m_strUnitName(strUnitName)
-	, m_nDeviceID(nDeviceID)
+	, m_nCardNo(nCardNo)
 	, m_nTotalAmount(nTotalAmount)
 	, m_nDeposit(nDeposit)
 	, m_nState(nState)
@@ -66,9 +66,9 @@ CString CUser::GetAddr() const
 }
 
 
-int CUser::GetUnitID() const
+int CUser::GetLicense() const
 {
-	return m_nUnitID;
+	return m_nLicense;
 }
 
 
@@ -78,9 +78,9 @@ CString CUser::GetUnitName() const
 }
 
 
-int CUser::GetDeviceID() const
+int CUser::GetCardNo() const
 {
-	return m_nDeviceID;
+	return m_nCardNo;
 }
 
 
@@ -186,9 +186,9 @@ void CUser::SetAddr(const CString & strAddr)
 }
 
 
-void CUser::SetUnitID(int nUnitID)
+void CUser::SetLicense(int nLicense)
 {
-	m_nUnitID = nUnitID;
+	m_nLicense = nLicense;
 }
 
 
@@ -198,9 +198,9 @@ void CUser::SetUnitName(const CString & strUnitName)
 }
 
 
-void CUser::SetDeviceID(int nDeviceID)
+void CUser::SetCardNo(int nCardNo)
 {
-	m_nDeviceID = nDeviceID;
+	m_nCardNo = nCardNo;
 }
 
 
