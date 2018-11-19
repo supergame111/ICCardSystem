@@ -7,7 +7,7 @@ CRecord::CRecord()
 }
 
 
-CRecord::CRecord(int nID, int nUserID, int nCardNo, int nAmountOld, int nAmount, int nAmountNew, int nDeposit, int nCost,CString strNoteInfo, int nEmployeeID, CString strTime)
+CRecord::CRecord(int nID, int nUserID, int nCardNo, int nAmountOld, int nAmount, int nAmountNew, int nDeposit, CString strNoteInfo, int nEmployeeID, CString strTime)
 	: m_nID(nID)
 	, m_nUserID(nUserID)
 	, m_nCardNo(nCardNo)
@@ -15,7 +15,6 @@ CRecord::CRecord(int nID, int nUserID, int nCardNo, int nAmountOld, int nAmount,
 	, m_nAmount(nAmount)
 	, m_nAmountNew(nAmountNew)
 	, m_nDeposit(nDeposit)
-	, m_nCost(nCost)
 	, m_strNoteInfo(strNoteInfo)
 	, m_nEmployeeID(nEmployeeID)
 	, m_strTime(strTime)
@@ -67,12 +66,6 @@ int CRecord::GetAmountNew() const
 int CRecord::GetDeposit() const
 {
 	return m_nDeposit;
-}
-
-
-int CRecord::GetCost() const
-{
-	return m_nCost;
 }
 
 

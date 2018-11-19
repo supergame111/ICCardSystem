@@ -3,6 +3,7 @@
 
 
 CUser::CUser()
+	:m_nID(0)
 {
 }
 

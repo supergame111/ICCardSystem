@@ -29,7 +29,6 @@ void CRecordDB::CreateTable()
 				Amount INT,\
 				AmountNew INT,\
 				Deposit INT,\
-				Cost INT,\
 				NoteInfo NVARCHAR(1000),\
 				EmployeeID INT,\
 				Time DATETIME\
@@ -44,7 +43,7 @@ bool CRecordDB::Insert(const CRecord & record)
 	ZSqlite3 zsql;
 	zsql.OpenDB(m_strPathDB);
 	CString strSql, strError;
-	strSql.Format(_T("INSERT INTO %s VALUES (%d,%d,%d,%d,%d,%d,%d,%d,'%s',%d,datetime('now','localtime'))"), m_strTableName, record.GetID(), record.GetUserID(),record.GetCardNo(), record.GetAmountOld(), record.GetAmount(), record.GetAmountNew(),record.GetDeposit(),record.GetCost(), record.GetNoteInfo(), record.GetEmployeeID());
+	strSql.Format(_T("INSERT INTO %s VALUES (%d,%d,%d,%d,%d,%d,%d,'%s',%d,datetime('now','localtime'))"), m_strTableName, record.GetID(), record.GetUserID(),record.GetCardNo(), record.GetAmountOld(), record.GetAmount(), record.GetAmountNew(),record.GetDeposit(),record.GetNoteInfo(), record.GetEmployeeID());
 	if (zsql.ExecSQL(strSql, &strError) == ZSqlite3::ERROR_OK)
 		return true;
 	else
@@ -64,11 +63,11 @@ bool CRecordDB::Select(const CString & strSql, std::vector<CRecord> & vec_record
 	if (nRow)
 	{
 		int nColumn = vec2_strData[0].size();
-		if (nColumn == 11)
+		if (nColumn == 10)
 		{
 			for (int i = 1; i < nRow; ++i)
 			{
-				CRecord record(_ttoi(vec2_strData[i][0]), _ttoi(vec2_strData[i][1]), _ttoi(vec2_strData[i][2]), _ttoi(vec2_strData[i][3]), _ttoi(vec2_strData[i][4]), _ttoi(vec2_strData[i][5]), _ttoi(vec2_strData[i][6]), _ttoi(vec2_strData[i][7]), vec2_strData[i][8], _ttoi(vec2_strData[i][9]), vec2_strData[i][10]);
+				CRecord record(_ttoi(vec2_strData[i][0]), _ttoi(vec2_strData[i][1]), _ttoi(vec2_strData[i][2]), _ttoi(vec2_strData[i][3]), _ttoi(vec2_strData[i][4]), _ttoi(vec2_strData[i][5]), _ttoi(vec2_strData[i][6]), vec2_strData[i][7], _ttoi(vec2_strData[i][8]), vec2_strData[i][9]);
 				vec_record.push_back(record);
 			}
 		}
