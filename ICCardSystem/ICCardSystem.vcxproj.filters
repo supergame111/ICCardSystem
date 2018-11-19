@@ -159,6 +159,12 @@
     <ClInclude Include="CToolLicenseCard.h">
       <Filter>头文件</Filter>
     </ClInclude>
+    <ClInclude Include="CCard.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="CCardDB.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="ICCardSystem.cpp">
@@ -276,6 +282,12 @@
       <Filter>源文件</Filter>
     </ClCompile>
     <ClCompile Include="CToolLicenseCard.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="CCard.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="CCardDB.cpp">
       <Filter>源文件</Filter>
     </ClCompile>
   </ItemGroup>

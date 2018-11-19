@@ -2,6 +2,7 @@
 #define _ZCLASSLIB_H
 #include "CEmployeeDB.h"
 #include "CUserDB.h"
+#include "CCardDB.h"
 #include "CPrestoreRecordDB.h"
 #include "CRefundRecordDB.h"
 #include "CReturnDepositRecordDB.h"

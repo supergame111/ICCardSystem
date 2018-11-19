@@ -184,6 +184,8 @@
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClInclude Include="CApplication.h" />
+    <ClInclude Include="CCard.h" />
+    <ClInclude Include="CCardDB.h" />
     <ClInclude Include="CCardOperator.h" />
     <ClInclude Include="CEmployee.h" />
     <ClInclude Include="CEmployeeDB.h" />
@@ -233,6 +235,8 @@
     <ClInclude Include="ZUtil.h" />
   </ItemGroup>
   <ItemGroup>
+    <ClCompile Include="CCard.cpp" />
+    <ClCompile Include="CCardDB.cpp" />
     <ClCompile Include="CCardOperator.cpp" />
     <ClCompile Include="CEmployee.cpp" />
     <ClCompile Include="CEmployeeDB.cpp" />
