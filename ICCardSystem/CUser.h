@@ -16,23 +16,16 @@ private:
 	CString m_strPhoneNo;
 	CString m_strAddr;
 	int m_nLicense;
-	CString m_strUnitName;
-	int m_nCardNo;
 	int m_nTotalAmount;//单位:分
-	int m_nDeposit;//单位:分
 	int m_nState;
 	CString m_strNoteInfo;
-	int m_nEmployeeIDOpenCard;
-	CString m_strTimeOpenCard;
-	int m_nEmployeeIDCloseCard;
-	CString m_strTimeCloseCard;
 	int m_nEmployeeIDAdd;
 	CString m_strTimeAdd;
 	int m_nEmployeeIDLastModify;
 	CString m_strTimeLastModify;
 public:
 	CUser();
-	CUser(int nID, CString strName, CString strIDNo, CString strPhoneNo, CString strAddr, int nLicense, CString strUnitName, int nCardNo, int nTotalAmount, int nDeposit, int nState, CString strNoteInfo, int nEmployeeIDOpenCard, CString strTimeOpenCard,  int nEmployeeIDCloseCard, CString strTimeCloseCard, int nEmployeeIDAdd, CString strTimeAdd, int nEmployeeIDLastModify, CString strTimeLastModify);
+	CUser(int nID, CString strName, CString strIDNo, CString strPhoneNo, CString strAddr, int nLicense, int nTotalAmount,  int nState, CString strNoteInfo, int nEmployeeIDAdd, CString strTimeAdd, int nEmployeeIDLastModify, CString strTimeLastModify);
 	virtual ~CUser();
 	int GetID() const;
 	CString GetName() const;
@@ -40,16 +33,9 @@ public:
 	CString GetPhoneNo() const;
 	CString GetAddr() const;
 	int GetLicense() const;
-	CString GetUnitName() const;
-	int GetCardNo() const;
 	int GetTotalAmount() const;
-	int GetDeposit() const;
 	int GetState() const;
 	CString GetNoteInfo() const;
-	int GetEmployeeIDOpenCard() const;
-	CString GetTimeOpenCard() const;
-	int GetEmployeeIDCloseCard() const;
-	CString GetTimeCloseCard() const;
 	int GetEmployeeIDAdd() const;
 	CString GetTimeAdd() const;
 	int GetEmployeeIDLastModify() const;
@@ -60,16 +46,9 @@ public:
 	void SetPhoneNo(const CString & strPhoneNo);
 	void SetAddr(const CString & strAddr);
 	void SetLicense(int nLicense);
-	void SetUnitName(const CString & strUnitName);
-	void SetCardNo(int nCardNo);
 	void SetTotalAmount(int nTotalAmount);
-	void SetDeposit(int nDeposit);
 	void SetState(int nState);
 	void SetNoteInfo(const CString & strNoteInfo);
-	void SetEmployeeIDOpenCard(int nEmployeeIDOpenCard);
-	void SetTimeOpenCard(const CString & strTimeOpenCard);
-	void SetEmployeeIDCloseCard(int nEmployeeIDOpenCard);
-	void SetTimeCloseCard(const CString & strTimeOpenCard);
 	void SetEmployeeIDAdd(int nEmployeeIDAdd);
 	void SetTimeAdd(const CString & strTimeAdd);
 	void SetEmployeeIDLastModify(int nEmployeeIDLastModify);

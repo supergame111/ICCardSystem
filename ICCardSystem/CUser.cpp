@@ -7,23 +7,16 @@ CUser::CUser()
 }
 
 
-CUser::CUser(int nID,CString strName,CString strIDNo,CString strPhoneNo,CString strAddr,int nLicense,CString strUnitName,int nCardNo,int nTotalAmount,int nDeposit,int nState,CString strNoteInfo, int nEmployeeIDOpenCard, CString strTimeOpenCard, int nEmployeeIDCloseCard, CString strTimeCloseCard, int nEmployeeIDAdd, CString strTimeAdd, int nEmployeeIDLastModify, CString strTimeLastModify)
+CUser::CUser(int nID,CString strName,CString strIDNo,CString strPhoneNo,CString strAddr,int nLicense,int nTotalAmount,int nState,CString strNoteInfo, int nEmployeeIDAdd, CString strTimeAdd, int nEmployeeIDLastModify, CString strTimeLastModify)
 	: m_nID(nID)
 	, m_strName(strName)
 	, m_strIDNo(strIDNo)
 	, m_strPhoneNo(strPhoneNo)
 	, m_strAddr(strAddr)
 	, m_nLicense(nLicense)
-	, m_strUnitName(strUnitName)
-	, m_nCardNo(nCardNo)
 	, m_nTotalAmount(nTotalAmount)
-	, m_nDeposit(nDeposit)
 	, m_nState(nState)
 	, m_strNoteInfo(strNoteInfo)
-	, m_nEmployeeIDOpenCard(nEmployeeIDOpenCard)
-	, m_strTimeOpenCard(strTimeOpenCard)
-	, m_nEmployeeIDCloseCard(nEmployeeIDCloseCard)
-	, m_strTimeCloseCard(strTimeCloseCard)
 	, m_nEmployeeIDAdd(nEmployeeIDAdd)
 	, m_strTimeAdd(strTimeAdd)
 	, m_nEmployeeIDLastModify(nEmployeeIDLastModify)
@@ -72,27 +65,9 @@ int CUser::GetLicense() const
 }
 
 
-CString CUser::GetUnitName() const
-{
-	return m_strUnitName;
-}
-
-
-int CUser::GetCardNo() const
-{
-	return m_nCardNo;
-}
-
-
 int CUser::GetTotalAmount() const
 {
 	return m_nTotalAmount;
-}
-
-
-int CUser::GetDeposit() const
-{
-	return m_nDeposit;
 }
 
 
@@ -105,30 +80,6 @@ int CUser::GetState() const
 CString CUser::GetNoteInfo() const
 {
 	return m_strNoteInfo;
-}
-
-
-int CUser::GetEmployeeIDOpenCard() const
-{
-	return m_nEmployeeIDOpenCard;
-}
-
-
-CString CUser::GetTimeOpenCard() const
-{
-	return m_strTimeOpenCard;
-}
-
-
-int CUser::GetEmployeeIDCloseCard() const
-{
-	return m_nEmployeeIDCloseCard;
-}
-
-
-CString CUser::GetTimeCloseCard() const
-{
-	return m_strTimeCloseCard;
 }
 
 
@@ -192,27 +143,9 @@ void CUser::SetLicense(int nLicense)
 }
 
 
-void CUser::SetUnitName(const CString & strUnitName)
-{
-	m_strUnitName = strUnitName;
-}
-
-
-void CUser::SetCardNo(int nCardNo)
-{
-	m_nCardNo = nCardNo;
-}
-
-
 void CUser::SetTotalAmount(int nTotalAmount)
 {
 	m_nTotalAmount = nTotalAmount;
-}
-
-
-void CUser::SetDeposit(int nDeposit)
-{
-	m_nDeposit = nDeposit;
 }
 
 
@@ -226,30 +159,6 @@ void CUser::SetState(int nState)
 void CUser::SetNoteInfo(const CString & strNoteInfo)
 {
 	m_strNoteInfo = strNoteInfo;
-}
-
-
-void CUser::SetEmployeeIDOpenCard(int nEmployeeIDOpenCard)
-{
-	m_nEmployeeIDOpenCard = nEmployeeIDOpenCard;
-}
-
-
-void CUser::SetTimeOpenCard(const CString & strTimeOpenCard)
-{
-	m_strTimeOpenCard = strTimeOpenCard;
-}
-
-
-void CUser::SetEmployeeIDCloseCard(int nEmployeeIDCloseCard)
-{
-	m_nEmployeeIDCloseCard = nEmployeeIDCloseCard;
-}
-
-
-void CUser::SetTimeCloseCard(const CString & strTimeCloseCard)
-{
-	m_strTimeCloseCard = strTimeCloseCard;
 }
 
 
