@@ -1,12 +1,6 @@
 #pragma once
 class CCard
 {
-public:
-	enum TYPE
-	{
-		TYPE_MONTHLY = 0,
-		TYPE_RECHARGE
-	};
 private:
 	int m_nID;
 	int m_nUserID;

@@ -6,7 +6,8 @@ public:
 	{
 		TYPE_SET = 0x1111,
 		TYPE_LICENSE = 0x2222,
-		TYPE_USER = 0x8888
+		TYPE_USER_TIME = 0x8800,
+		TYPE_USER_RECHARGE = 0x8866
 	};
 public:
 	CCardOperator();
