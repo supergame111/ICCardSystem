@@ -87,7 +87,61 @@ CString CCard::GetTimeCloseCard() const
 }
 
 
+void CCard::SetID(int nID)
+{
+	m_nID = nID;
+}
+
+
+void CCard::SetUserID(int nUserID)
+{
+	m_nUserID = nUserID;
+}
+
+
+void CCard::SetNo(int nNo)
+{
+	m_nNo = nNo;
+}
+
+
+void CCard::SetType(int nType)
+{
+	m_nType = nType;
+}
+
+
+void CCard::SetDeadline(CString strDeadline)
+{
+	m_strDeadline = strDeadline;
+}
+
+
+void CCard::SetDeposit(int nDeposit)
+{
+	m_nDeposit = nDeposit;
+}
+
+
+void CCard::SetEmployeeIDOpenCard(int nEmployeeIDOpenCard)
+{
+	m_nEmployeeIDOpenCard = nEmployeeIDOpenCard;
+}
+
+
+void CCard::SetTimeOpenCard(CString strTimeOpenCard)
+{
+	m_strTimeOpenCard = strTimeOpenCard;
+}
+
+
 void CCard::SetEmployeeIDCloseCard(int nEmployeeIDCloseCard)
 {
 	m_nEmployeeIDCloseCard = nEmployeeIDCloseCard;
+}
+
+
+void CCard::SetTimeCloseCard(CString strTimeCloseCard)
+{
+	m_strTimeCloseCard = strTimeCloseCard;
 }

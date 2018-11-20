@@ -50,6 +50,20 @@ bool CCardDB::Insert(const CCard & card)
 }
 
 
+bool CCardDB::UpdateOpenCard(const CCard & card)
+{
+	CreateTable();
+	ZSqlite3 zsql;
+	zsql.OpenDB(m_strPathDB);
+	CString strSql, strError;
+	strSql.Format(_T("UPDATE Card SET Type=%d,Deadline='%s',Deposit=%d,EmployeeIDOpenCard=%d,TimeOpenCard=datetime('now','localtime'),EmployeeIDCloseCard=NULL,TimeCloseCard=NULL WHERE ID=%d"), card.GetType(),card.GetDeadline(),card.GetDeposit(),card.GetEmployeeIDOpenCard(), card.GetID());
+	if (zsql.ExecSQL(strSql, &strError) == ZSqlite3::ERROR_OK)
+		return true;
+	else
+		return false;
+}
+
+
 bool CCardDB::UpdateCloseCard(const CCard & card)
 {
 	CreateTable();

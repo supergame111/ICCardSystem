@@ -32,6 +32,15 @@ public:
 	CString GetTimeOpenCard() const;
 	int GetEmployeeIDCloseCard() const;
 	CString GetTimeCloseCard() const;
+	void SetID(int nID);
+	void SetUserID(int nUserID);
+	void SetNo(int nNo);
+	void SetType(int nType);
+	void SetDeadline(CString strDeadline);
+	void SetDeposit(int nDeposit);
+	void SetEmployeeIDOpenCard(int nEmployeeIDOpenCard);
+	void SetTimeOpenCard(CString strTimeOpenCard);
 	void SetEmployeeIDCloseCard(int nEmployeeIDCloseCard);
+	void SetTimeCloseCard(CString strTimeCloseCard);
 };
 
