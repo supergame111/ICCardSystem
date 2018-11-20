@@ -23,4 +23,5 @@ protected:
 public:
 	virtual BOOL OnInitDialog();
 	afx_msg void OnBnClickedButtonLicensecard();
+	afx_msg void OnEnChangeEditLicense();
 };
