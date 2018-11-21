@@ -3,22 +3,27 @@
 
 
 CCard::CCard()
+	:m_nID(0)
+	,m_nState(STATE_UNOPEN)
 {
 }
 
 
-CCard::CCard(int nID, int nUserID, int nNo,int nType, CString strDeadline, int nDeposit, int nEmployeeIDOpenCard, CString strTimeOpenCard, int nEmployeeIDCloseCard, CString strTimeCloseCard)
+CCard::CCard(int nID, int nUserID, int nNo,int nType, CString strDeadline, int nDeposit,int nState, int nEmployeeIDOpenCard, CString strTimeOpenCard, int nEmployeeIDCloseCard, CString strTimeCloseCard)
 	: m_nID(nID)
 	, m_nUserID(nUserID)
 	, m_nNo(nNo)
 	, m_nType(nType)
 	, m_strDeadline(strDeadline)
 	, m_nDeposit(nDeposit)
+	, m_nState(STATE_UNOPEN)
 	, m_nEmployeeIDOpenCard(nEmployeeIDOpenCard)
 	, m_strTimeOpenCard(strTimeOpenCard)
 	, m_nEmployeeIDCloseCard(nEmployeeIDCloseCard)
 	, m_strTimeCloseCard(strTimeCloseCard)
 {
+	if (nState < STATE_ERROR)
+		m_nState = nState;
 }
 
 
@@ -60,6 +65,12 @@ CString CCard::GetDeadline() const
 int CCard::GetDeposit() const
 {
 	return m_nDeposit;
+}
+
+
+int CCard::GetState() const
+{
+	return m_nState;
 }
 
 
@@ -120,6 +131,13 @@ void CCard::SetDeadline(CString strDeadline)
 void CCard::SetDeposit(int nDeposit)
 {
 	m_nDeposit = nDeposit;
+}
+
+
+void CCard::SetState(int nState)
+{
+	if (nState < STATE_ERROR)
+		m_nState = nState;
 }
 
 
