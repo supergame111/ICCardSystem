@@ -14,7 +14,7 @@ private:
 	int m_nUserID;
 	int m_nNo;//卡号
 	int m_nType;//类型
-	CString m_strDeadline;//截至日期
+	CString m_strDeadline;//截止日期
 	int m_nDeposit;//单位:分
 	int m_nState;
 	int m_nEmployeeIDOpenCard;
