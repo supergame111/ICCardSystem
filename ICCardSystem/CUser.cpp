@@ -4,6 +4,7 @@
 
 CUser::CUser()
 	:m_nID(0)
+	,m_nState(STATE_UNOPEN)
 {
 }
 
@@ -16,13 +17,15 @@ CUser::CUser(int nID,CString strName,CString strIDNo,CString strPhoneNo,CString 
 	, m_strAddr(strAddr)
 	, m_nLicense(nLicense)
 	, m_nTotalAmount(nTotalAmount)
-	, m_nState(nState)
+	, m_nState(STATE_UNOPEN)
 	, m_strNoteInfo(strNoteInfo)
 	, m_nEmployeeIDAdd(nEmployeeIDAdd)
 	, m_strTimeAdd(strTimeAdd)
 	, m_nEmployeeIDLastModify(nEmployeeIDLastModify)
 	, m_strTimeLastModify(strTimeLastModify)
 {
+	if (nState < STATE_ERROR)
+		m_nState = nState;
 }
 
 CUser::~CUser()
@@ -152,7 +155,7 @@ void CUser::SetTotalAmount(int nTotalAmount)
 
 void CUser::SetState(int nState)
 {
-	if(nState< CUser::STATE_ERROR)
+	if(nState< STATE_ERROR)
 		m_nState = nState;
 }
 
