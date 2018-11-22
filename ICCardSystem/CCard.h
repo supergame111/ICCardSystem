@@ -16,6 +16,7 @@ private:
 	int m_nType;//类型
 	CString m_strDeadline;//截止日期
 	int m_nDeposit;//单位:分
+	int m_nTotalAmount;//单位:分
 	int m_nState;
 	int m_nEmployeeIDOpenCard;
 	CString m_strTimeOpenCard;
@@ -23,7 +24,7 @@ private:
 	CString m_strTimeCloseCard;
 public:
 	CCard();
-	CCard(int nID, int nUserID, int nNo, int nType, CString strDeadline, int nDeposit, int nState, int nEmployeeIDOpenCard, CString strTimeOpenCard, int nEmployeeIDCloseCard, CString strTimeCloseCard);
+	CCard(int nID, int nUserID, int nNo, int nType, CString strDeadline, int nDeposit, int nTotalAmount, int nState, int nEmployeeIDOpenCard, CString strTimeOpenCard, int nEmployeeIDCloseCard, CString strTimeCloseCard);
 	virtual ~CCard();
 	int GetID() const;
 	int GetUserID() const;
@@ -31,6 +32,7 @@ public:
 	int GetType() const;
 	CString GetDeadline() const;
 	int GetDeposit() const;
+	int GetTotalAmount() const;
 	int GetState() const;
 	int GetEmployeeIDOpenCard() const;
 	CString GetTimeOpenCard() const;
@@ -42,6 +44,7 @@ public:
 	void SetType(int nType);
 	void SetDeadline(CString strDeadline);
 	void SetDeposit(int nDeposit);
+	void SetTotalAmount(int nTotalAmount);
 	void SetState(int nState);
 	void SetEmployeeIDOpenCard(int nEmployeeIDOpenCard);
 	void SetTimeOpenCard(CString strTimeOpenCard);

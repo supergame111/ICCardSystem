@@ -9,13 +9,14 @@ CCard::CCard()
 }
 
 
-CCard::CCard(int nID, int nUserID, int nNo,int nType, CString strDeadline, int nDeposit,int nState, int nEmployeeIDOpenCard, CString strTimeOpenCard, int nEmployeeIDCloseCard, CString strTimeCloseCard)
+CCard::CCard(int nID, int nUserID, int nNo,int nType, CString strDeadline, int nDeposit, int nTotalAmount,int nState, int nEmployeeIDOpenCard, CString strTimeOpenCard, int nEmployeeIDCloseCard, CString strTimeCloseCard)
 	: m_nID(nID)
 	, m_nUserID(nUserID)
 	, m_nNo(nNo)
 	, m_nType(nType)
 	, m_strDeadline(strDeadline)
 	, m_nDeposit(nDeposit)
+	, m_nTotalAmount(nTotalAmount)
 	, m_nState(STATE_UNOPEN)
 	, m_nEmployeeIDOpenCard(nEmployeeIDOpenCard)
 	, m_strTimeOpenCard(strTimeOpenCard)
@@ -65,6 +66,12 @@ CString CCard::GetDeadline() const
 int CCard::GetDeposit() const
 {
 	return m_nDeposit;
+}
+
+
+int CCard::GetTotalAmount() const
+{
+	return m_nTotalAmount;
 }
 
 
@@ -131,6 +138,12 @@ void CCard::SetDeadline(CString strDeadline)
 void CCard::SetDeposit(int nDeposit)
 {
 	m_nDeposit = nDeposit;
+}
+
+
+void CCard::SetTotalAmount(int nTotalAmount)
+{
+	m_nTotalAmount = nTotalAmount;
 }
 
 
