@@ -60,7 +60,7 @@ bool CCardOperator::ReadCardNo(CString & strCardNo, CString & strError, bool bIs
 	int nRtn_0A = block_00.MF_Read(strCard);
 	if (!nRtn_0A)
 	{
-		strCardNo.Format(_T("%d"), _tcstol(strCard.Left(8), NULL, 16));
+		strCardNo=strCard.Left(8);
 		if (bIsCtrlReader)
 		{
 			ISO14443A_MF ctrl;
@@ -153,25 +153,25 @@ bool CCardOperator::ClearUserCard(bool bIsCtrlReader)
 }
 
 
-void CCardOperator::DecodeCard(const CString & strCard, int & nCardNo, int  & nLicense, int  & nCardType)
+void CCardOperator::DecodeCard(const CString & strCard, CString & strCardNo, int  & nLicense, int  & nCardType)
 {
-	nCardNo = _tcstol(strCard.Mid(0, 8), NULL, 16);
+	strCardNo = strCard.Mid(0, 8);
 	nLicense = _tcstol(strCard.Mid(8, 4), NULL, 16);
 	nCardType = _tcstol(strCard.Mid(12, 4), NULL, 16);
 }
 
 
-CString CCardOperator::EncodeUserCard(int nCardNo, int nLicense, int nCardType, int nUserID, int nBalance)
+CString CCardOperator::EncodeUserCard(CString strCardNo, int nLicense, int nCardType, int nUserID, int nBalance)
 {
 	CString strCard;
-	strCard.Format(_T("%08X%04X%04X%08X%08X"), nCardNo, nLicense, nCardType, nUserID, nBalance);
+	strCard.Format(_T("%s%04X%04X%08X%08X"), strCardNo, nLicense, nCardType, nUserID, nBalance);
 	return strCard;
 }
 
 
-void CCardOperator::DecodeUserCard(const CString & strCard, int & nCardNo, int  & nLicense, int  & nCardType, int  & nUserID, int  & nBalance)
+void CCardOperator::DecodeUserCard(const CString & strCard, CString & strCardNo, int  & nLicense, int  & nCardType, int  & nUserID, int  & nBalance)
 {
-	nCardNo = _tcstol(strCard.Mid(0, 8), NULL, 16);
+	strCardNo = strCard.Mid(0, 8);
 	nLicense = _tcstol(strCard.Mid(8, 4), NULL, 16);
 	nCardType = _tcstol(strCard.Mid(12, 4), NULL, 16);
 	nUserID = _tcstol(strCard.Mid(16, 8), NULL, 16);
@@ -179,17 +179,17 @@ void CCardOperator::DecodeUserCard(const CString & strCard, int & nCardNo, int  
 }
 
 
-CString CCardOperator::EncodeSetCard(int nCardNo, int nLicense, int nCardType, int  nPortNum, int nChargeTime, int nUnitPrice)
+CString CCardOperator::EncodeSetCard(CString strCardNo, int nLicense, int nCardType, int  nPortNum, int nChargeTime, int nUnitPrice)
 {
 	CString strCard;
-	strCard.Format(_T("%08X%04X%04X%04X%04X%08X"), nCardNo, nLicense, nCardType, nPortNum, nChargeTime, nUnitPrice);
+	strCard.Format(_T("%s%04X%04X%04X%04X%08X"), strCardNo, nLicense, nCardType, nPortNum, nChargeTime, nUnitPrice);
 	return strCard;
 }
 
 
-void CCardOperator::DecodeSetCard(const CString & strCard, int & nCardNo, int  & nLicense, int  & nCardType, int  & nPortNum, int & nChargeTime, int & nUnitPrice)
+void CCardOperator::DecodeSetCard(const CString & strCard, CString & strCardNo, int  & nLicense, int  & nCardType, int  & nPortNum, int & nChargeTime, int & nUnitPrice)
 {
-	nCardNo = _tcstol(strCard.Mid(0, 8), NULL, 16);
+	strCardNo = strCard.Mid(0, 8);
 	nLicense = _tcstol(strCard.Mid(8, 4), NULL, 16);
 	nCardType = _tcstol(strCard.Mid(12, 4), NULL, 16);
 	nPortNum = _tcstol(strCard.Mid(16, 4), NULL, 16);
@@ -198,17 +198,17 @@ void CCardOperator::DecodeSetCard(const CString & strCard, int & nCardNo, int  &
 }
 
 
-CString CCardOperator::EncodeLicenseCard(int nCardNo, int nLicense, int nCardType)
+CString CCardOperator::EncodeLicenseCard(CString strCardNo, int nLicense, int nCardType)
 {
 	CString strCard;
-	strCard.Format(_T("%08X%04X%04X%08X%08X"), nCardNo, nLicense, nCardType, 0x55555555, 0x55555555);
+	strCard.Format(_T("%s%04X%04X%08X%08X"), strCardNo, nLicense, nCardType, 0x55555555, 0x55555555);
 	return strCard;
 }
 
 
-void CCardOperator::DecodeLicenseCard(const CString & strCard, int & nCardNo, int  & nLicense, int  & nCardType)
+void CCardOperator::DecodeLicenseCard(const CString & strCard, CString & strCardNo, int  & nLicense, int  & nCardType)
 {
-	nCardNo = _tcstol(strCard.Mid(0, 8), NULL, 16);
+	strCardNo = strCard.Mid(0, 8);
 	nLicense = _tcstol(strCard.Mid(8, 4), NULL, 16);
 	nCardType = _tcstol(strCard.Mid(12, 4), NULL, 16);
 }

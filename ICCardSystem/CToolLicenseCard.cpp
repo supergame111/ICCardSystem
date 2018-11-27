@@ -63,8 +63,7 @@ void CToolLicenseCard::OnBnClickedButtonLicensecard()
 		AfxMessageBox(_T("写卡失败!\r\n") + strError);
 		return;
 	}
-	int nCardNo = _ttoi(strCardNo);
-	strCard = CCardOperator::EncodeLicenseCard(nCardNo, nLicense, CCardOperator::TYPE_LICENSE);
+	strCard = CCardOperator::EncodeLicenseCard(strCardNo, nLicense, CCardOperator::TYPE_LICENSE);
 	if (CCardOperator::WriteCard(strCard, strError, true))
 		AfxMessageBox(_T("写卡成功!"));
 	else

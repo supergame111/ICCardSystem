@@ -9,10 +9,10 @@ CCard::CCard()
 }
 
 
-CCard::CCard(int nID, int nUserID, int nNo,int nType, CString strDeadline, int nDeposit, int nTotalAmount,int nState, int nEmployeeIDOpenCard, CString strTimeOpenCard, int nEmployeeIDCloseCard, CString strTimeCloseCard)
+CCard::CCard(int nID, int nUserID, CString strNo,int nType, CString strDeadline, int nDeposit, int nTotalAmount,int nState, int nEmployeeIDOpenCard, CString strTimeOpenCard, int nEmployeeIDCloseCard, CString strTimeCloseCard)
 	: m_nID(nID)
 	, m_nUserID(nUserID)
-	, m_nNo(nNo)
+	, m_strNo(strNo)
 	, m_nType(nType)
 	, m_strDeadline(strDeadline)
 	, m_nDeposit(nDeposit)
@@ -45,9 +45,9 @@ int CCard::GetUserID() const
 }
 
 
-int CCard::GetNo() const
+CString CCard::GetNo() const
 {
-	return m_nNo;
+	return m_strNo;
 }
 
 
@@ -117,9 +117,9 @@ void CCard::SetUserID(int nUserID)
 }
 
 
-void CCard::SetNo(int nNo)
+void CCard::SetNo(CString strNo)
 {
-	m_nNo = nNo;
+	m_strNo = strNo;
 }
 
 
