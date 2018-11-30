@@ -5,6 +5,7 @@
 #include "CCardDB.h"
 #include "CPrestoreRecordDB.h"
 #include "CRefundRecordDB.h"
+#include "CInitDepositRecordDB.h"
 #include "CReturnDepositRecordDB.h"
 #include "CUnionDB.h"
 #include "ISO14443A_MF.h"

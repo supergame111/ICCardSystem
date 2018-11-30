@@ -191,6 +191,7 @@
     <ClInclude Include="CEmployeeDB.h" />
     <ClInclude Include="CEmployeeEdit.h" />
     <ClInclude Include="CExcelExport.h" />
+    <ClInclude Include="CInitDepositRecordDB.h" />
     <ClInclude Include="CLogin.h" />
     <ClInclude Include="CPasswordEdit.h" />
     <ClInclude Include="CPrestoreRecordDB.h" />
@@ -240,6 +241,7 @@
     <ClCompile Include="CEmployeeDB.cpp" />
     <ClCompile Include="CEmployeeEdit.cpp" />
     <ClCompile Include="CExcelExport.cpp" />
+    <ClCompile Include="CInitDepositRecordDB.cpp" />
     <ClCompile Include="CLogin.cpp" />
     <ClCompile Include="CPasswordEdit.cpp" />
     <ClCompile Include="CPrestoreRecordDB.cpp" />
