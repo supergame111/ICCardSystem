@@ -1,7 +1,7 @@
 #pragma once
 #include "ZOperatorExcelFile.h"
 #include <vector>
-class CExcelExport
+class ZExcelExport
 {
 public:
 	class CCallBack
@@ -14,7 +14,7 @@ public:
 		CString m_strDemoPath;
 		int m_nRowOffset;
 		int m_nColumnOffset;
-		std::vector<std::vector<CString>> m_vec2_strData;
+		std::vector<std::vector<CString>> m_vec2_strDataExport;
 	public:
 		CCallBack()
 			: m_hEvt(NULL)
@@ -24,8 +24,8 @@ public:
 			, m_nRowOffset(0)
 			, m_nColumnOffset(0)
 		{
-			if(!m_hEvt)
-				m_hEvt= CreateEvent(NULL, TRUE, TRUE, NULL);
+			if (!m_hEvt)
+				m_hEvt = CreateEvent(NULL, TRUE, TRUE, NULL);
 		};
 		virtual ~CCallBack()
 		{
@@ -43,8 +43,8 @@ public:
 		CString GetDemoPath() { return m_strDemoPath; };
 		int GetRowOffset() { return m_nRowOffset; };
 		int GetColumnOffset() { return m_nColumnOffset; };
-		const std::vector<std::vector<CString>> & GetData() { return m_vec2_strData; };
-		void StopRunExport() 
+		const std::vector<std::vector<CString>> & GetDataExport() { return m_vec2_strDataExport; };
+		void StopRunExport()
 		{
 			m_bIsRun = false;
 			WaitForSingleObject(m_hEvt, INFINITE);
@@ -53,13 +53,12 @@ public:
 private:
 	CCallBack * m_p_callback;
 	HANDLE m_hEvtCopyFinish;
-	CExcelExport(const CExcelExport & ee);
-	CExcelExport & operator = (const CExcelExport & ee);
+	ZExcelExport(const ZExcelExport & ee);
+	ZExcelExport & operator = (const ZExcelExport & ee);
 	static UINT ExportThreadFunc(LPVOID lpParam);
 public:
-	CExcelExport();
-	CExcelExport(CCallBack * p_callback);
-	virtual ~CExcelExport();
+	ZExcelExport(CCallBack * p_callback);
+	virtual ~ZExcelExport();
 	bool Start();
 };
 

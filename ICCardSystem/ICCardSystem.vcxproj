@@ -190,7 +190,6 @@
     <ClInclude Include="CEmployee.h" />
     <ClInclude Include="CEmployeeDB.h" />
     <ClInclude Include="CEmployeeEdit.h" />
-    <ClInclude Include="CExcelExport.h" />
     <ClInclude Include="CInitDepositRecordDB.h" />
     <ClInclude Include="CLogin.h" />
     <ClInclude Include="CPasswordEdit.h" />
@@ -229,6 +228,8 @@
     <ClInclude Include="stdafx.h" />
     <ClInclude Include="targetver.h" />
     <ClInclude Include="ZClassLib.h" />
+    <ClInclude Include="ZExcelExport.h" />
+    <ClInclude Include="ZExcelImport.h" />
     <ClInclude Include="ZOperatorExcelFile.h" />
     <ClInclude Include="ZSqlite3.h" />
     <ClInclude Include="ZUtil.h" />
@@ -240,7 +241,6 @@
     <ClCompile Include="CEmployee.cpp" />
     <ClCompile Include="CEmployeeDB.cpp" />
     <ClCompile Include="CEmployeeEdit.cpp" />
-    <ClCompile Include="CExcelExport.cpp" />
     <ClCompile Include="CInitDepositRecordDB.cpp" />
     <ClCompile Include="CLogin.cpp" />
     <ClCompile Include="CPasswordEdit.cpp" />
@@ -276,6 +276,8 @@
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Create</PrecompiledHeader>
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|x64'">Create</PrecompiledHeader>
     </ClCompile>
+    <ClCompile Include="ZExcelExport.cpp" />
+    <ClCompile Include="ZExcelImport.cpp" />
     <ClCompile Include="ZOperatorExcelFile.cpp" />
     <ClCompile Include="ZSqlite3.cpp" />
     <ClCompile Include="ZUtil.cpp" />

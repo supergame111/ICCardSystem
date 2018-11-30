@@ -1,17 +1,8 @@
 #include "stdafx.h"
-#include "CExcelExport.h"
+#include "ZExcelExport.h"
 
 
-CExcelExport::CExcelExport()
-	: m_p_callback(NULL)
-	, m_hEvtCopyFinish(NULL)
-{
-	if (!m_hEvtCopyFinish)
-		m_hEvtCopyFinish = CreateEvent(NULL, TRUE, TRUE, NULL);
-}
-
-
-CExcelExport::CExcelExport(CCallBack * p_callback)
+ZExcelExport::ZExcelExport(CCallBack * p_callback)
 	: m_p_callback(p_callback)
 	, m_hEvtCopyFinish(NULL)
 {
@@ -20,7 +11,7 @@ CExcelExport::CExcelExport(CCallBack * p_callback)
 }
 
 
-CExcelExport::~CExcelExport()
+ZExcelExport::~ZExcelExport()
 {
 	WaitForSingleObject(m_hEvtCopyFinish, INFINITE);
 	if (m_hEvtCopyFinish)
@@ -31,7 +22,7 @@ CExcelExport::~CExcelExport()
 }
 
 
-bool CExcelExport::Start()
+bool ZExcelExport::Start()
 {
 	ResetEvent(m_hEvtCopyFinish);
 	if (AfxBeginThread(ExportThreadFunc, (LPVOID)this))
@@ -43,9 +34,9 @@ bool CExcelExport::Start()
 }
 
 
-UINT CExcelExport::ExportThreadFunc(LPVOID lpParam)
+UINT ZExcelExport::ExportThreadFunc(LPVOID lpParam)
 {
-	CExcelExport * p_ee = (CExcelExport *)lpParam;
+	ZExcelExport * p_ee = (ZExcelExport *)lpParam;
 	CCallBack * p_callback = p_ee->m_p_callback;
 	SetEvent(p_ee->m_hEvtCopyFinish);
 	ResetEvent(p_callback->GetEvt());
@@ -59,7 +50,7 @@ UINT CExcelExport::ExportThreadFunc(LPVOID lpParam)
 		{
 			if (operatorexcel.LoadSheet(0))
 			{
-				const std::vector<std::vector<CString>> & vec2_Data = p_callback->GetData();
+				const std::vector<std::vector<CString>> & vec2_Data = p_callback->GetDataExport();
 				int nRow = vec2_Data.size();
 				if (nRow)
 				{
@@ -84,7 +75,7 @@ UINT CExcelExport::ExportThreadFunc(LPVOID lpParam)
 		}
 		operatorexcel.ReleaseExcel();
 	}
-	if(p_callback->IsRun())
+	if (p_callback->IsRun())
 		p_callback->OnExportResult(bResult);
 	ZOperatorExcelFile::UninitOle();
 	SetEvent(p_callback->GetEvt());

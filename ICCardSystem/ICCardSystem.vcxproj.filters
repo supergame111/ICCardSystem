@@ -144,9 +144,6 @@
     <ClInclude Include="CRange.h">
       <Filter>头文件</Filter>
     </ClInclude>
-    <ClInclude Include="CExcelExport.h">
-      <Filter>头文件</Filter>
-    </ClInclude>
     <ClInclude Include="ZOperatorExcelFile.h">
       <Filter>头文件</Filter>
     </ClInclude>
@@ -160,6 +157,12 @@
       <Filter>头文件</Filter>
     </ClInclude>
     <ClInclude Include="CInitDepositRecordDB.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="ZExcelExport.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="ZExcelImport.h">
       <Filter>头文件</Filter>
     </ClInclude>
   </ItemGroup>
@@ -266,9 +269,6 @@
     <ClCompile Include="CUserPrestoreStatistics.cpp">
       <Filter>源文件</Filter>
     </ClCompile>
-    <ClCompile Include="CExcelExport.cpp">
-      <Filter>源文件</Filter>
-    </ClCompile>
     <ClCompile Include="ZOperatorExcelFile.cpp">
       <Filter>源文件</Filter>
     </ClCompile>
@@ -282,6 +282,12 @@
       <Filter>源文件</Filter>
     </ClCompile>
     <ClCompile Include="CInitDepositRecordDB.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="ZExcelExport.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="ZExcelImport.cpp">
       <Filter>源文件</Filter>
     </ClCompile>
   </ItemGroup>
