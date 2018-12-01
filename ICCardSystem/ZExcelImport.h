@@ -41,7 +41,7 @@ public:
 		int GetRowOffset() { return m_nRowOffset; };
 		int GetColumnOffset() { return m_nColumnOffset; };
 		std::vector<std::vector<CString>> & GetDataImport() { return m_vec2_strDataImport; };
-		void StopRunExport()
+		void StopRunImport()
 		{
 			m_bIsRun = false;
 			WaitForSingleObject(m_hEvt, INFINITE);
