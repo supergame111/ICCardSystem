@@ -11,4 +11,5 @@
 #include "ISO14443A_MF.h"
 #include "CCardOperator.h"
 #include "ZExcelExport.h"
+#include "ZButton.h"
 #endif
