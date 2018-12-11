@@ -199,6 +199,7 @@
     <ClInclude Include="CRecordDB.h" />
     <ClInclude Include="CRefundRecordDB.h" />
     <ClInclude Include="CReturnDepositRecordDB.h" />
+    <ClInclude Include="CToolClearCard.h" />
     <ClInclude Include="CToolLicenseCard.h" />
     <ClInclude Include="CToolReadCard.h" />
     <ClInclude Include="CToolSetCard.h" />
@@ -250,6 +251,7 @@
     <ClCompile Include="CRecordDB.cpp" />
     <ClCompile Include="CRefundRecordDB.cpp" />
     <ClCompile Include="CReturnDepositRecordDB.cpp" />
+    <ClCompile Include="CToolClearCard.cpp" />
     <ClCompile Include="CToolLicenseCard.cpp" />
     <ClCompile Include="CToolReadCard.cpp" />
     <ClCompile Include="CToolSetCard.cpp" />
